@@ -6,9 +6,19 @@
     <title>e-Pies | Piesik od Pokoleń | Psie mięso </title>
 </head>
 <style>
-body{
+body, html{
     margin: 0;
+    padding: 0  ;
 }
+*{
+    color: #ffffff;
+}
+video{
+    position: absolute;
+    z-index: -100;
+    top: 0;
+}
+
 </style>
 <body>
     <div class="video-container">
@@ -17,5 +27,14 @@ body{
             <source src='src/video/explore.mp4' type='video/mp4' />
             <source src='src/video/explore.webm' type='video/webm' />
         </video>
+        <h1>Piesik od Pokoleń</h1>
+    </div>
+
+        <div class="content">
+            <h1>Heading</h1>
+            <p>Lorem ipsum...</p>
+            <!-- Use a button to pause/play the video with JavaScript -->
+            <button id="myBtn" onclick="myFunction()">Pause</button>
+          </div>    
 </body>
 </html>
