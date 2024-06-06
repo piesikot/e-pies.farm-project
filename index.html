@@ -19,30 +19,38 @@ video{
     top: 0;
 }
 .logo{
-           filter: brightness(0) invert(1);
-        /* padding: 10px; */
-        width: 8%;
+        filter: brightness(0) invert(1);
+        width: clamp(25px, 12%, 300px);
         position: fixed;
-        top: 15px;
-        left: 15px;
-    }
+        top: 3vw;
+        left: 3vw;
+        }
 .top-bar{
         display: flex;
         justify-content:flex-end;
         padding-right: 15px;
         list-style:none;
         gap: 30px;
+        font-size: clamp(8px, 3vw, 72px);
     }
     .top-bar > li{
-        /* padding:  ; */
+        padding:  clamp(4px, 1vw, 72px);
+        /* padding: 1vw; */
     }
 header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column  ;
 }
 h1{
     text-align: center;
+    font-size: clamp(22px, 8vw, 148px);
+    margin: 0px 0px;
+    /* margin-bottom: 0px; */
+}
+h2{
+    font-size: clamp(8px, 3vw, 72px);
 }
 </style>
 <body>
@@ -57,11 +65,12 @@ h1{
             <ul class="top-bar">     
                 <li>Option 1</li>
                 <li>Option 2</li>
-                <li>Option 3</li>
+                <li>Etyka</li>
             </ul>
         </nav>
         <header>
             <h1>Piesik od Pokoleń</h1>
+            <h2>Psie mięso to przyszłość!</h2>
         </header>
     </div>
 
