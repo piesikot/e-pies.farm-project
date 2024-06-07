@@ -12,6 +12,7 @@ body, html{
 }
 *{
     color: #ffffff;
+    /* background: #000; */
 }
 video{
     position: absolute;
@@ -52,6 +53,40 @@ h1{
 h2{
     font-size: clamp(8px, 3vw, 72px);
 }
+.pros-container{
+    display: flex;
+}
+.pro-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5vw 0px 5vw;
+    width: 30vw;
+    align-items: center;
+    text-align: center;
+}
+.pro-img{
+    border-radius: 50% ;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border: 0.2vw solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pro-img img{
+    width: 60px;
+}
+.pro-title{
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+
+video{
+    /* display: none; */
+}
 </style>
 <body>
     <div class="video-container">
@@ -73,6 +108,44 @@ h2{
             <h2>Psie mięso to przyszłość!</h2>
         </header>
     </div>
+    <div class="pros-container">
+        <div class="pro-container">
+            <div class="pro-img">
+                <img src="src/wolnywybieg.png" alt="">
+            </div>
+            <span class="pro-title">
+                Wolny Wybieg
+            </span>
+            <span class="pro-description">
+                Nasze psy mają możliwość przebywania na świeżym powietrzu.
+            </span>
+        </div>
+    
+        <div class="pro-container">
+            <div class="pro-img">
+                <img src="/src/humanitarnyuboj.png" alt="">
+            </div>
+            <span class="pro-title">
+                Humanitarny Ubój
+            </span>
+            <span class="pro-description">
+                Dbamy, aby nasze psy były odpowiednio ogłuszone przed zabiciem.
+            </span>
+        </div>
 
+        <div class="pro-container">
+            <div class="pro-img">
+                <img src="/src/wioskowemieso.png" alt="">
+            </div>
+            <span class="pro-title">
+                Wiejskie Mięso
+            </span>
+            <span class="pro-description">
+            Produkty z lokalnego gospodarstwa, a nie hodowli przemysłowych.
+            </span>
+        </div>
+    </div>
+
+    
 </body>
 </html>
