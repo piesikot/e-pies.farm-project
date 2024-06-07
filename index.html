@@ -8,19 +8,23 @@
 <style>
 body, html{
     margin: 0;
-    padding: 0  ;
 }
 *{
-    color: #ffffff;
+    color: #ffffff
+}
+.container{
+background: #000;
+z-index: -9;
+position: absolute;
 }
 video{
     position: absolute;
-    z-index: -100;
+    z-index: -10;
     top: 0;
 }
 .logo{
         filter: brightness(0) invert(1);
-        width: clamp(25px, 12%, 300px);
+        width: clamp(25px, 8vw, 300px);
         position: fixed;
         top: 3vw;
         left: 3vw;
@@ -28,51 +32,120 @@ video{
 .top-bar{
         display: flex;
         justify-content:flex-end;
-        padding-right: 15px;
+        padding-right: 30px;
         list-style:none;
-        gap: 30px;
-        font-size: clamp(8px, 3vw, 72px);
-    }
-    .top-bar > li{
-        padding:  clamp(4px, 1vw, 72px);
-        /* padding: 1vw; */
+        gap: 3vw;
+        font-size: clamp(20px, 1.8vw, 72px);
     }
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column  ;
+    flex-direction: column ;
 }
 h1{
     text-align: center;
-    font-size: clamp(22px, 8vw, 148px);
-    margin: 0px 0px;
-    /* margin-bottom: 0px; */
+    font-size: clamp(22px, 4vw, 148px);
+    margin-bottom: 0px;
 }
 h2{
-    font-size: clamp(8px, 3vw, 72px);
+    font-size: clamp(8px, 1.5vw, 72px);
 }
+.pros-container{
+    display: flex;
+    padding: 4vw;
+    font-size: clamp(8px, 1.5vw, 72px);
+}
+.pro-container{
+    display: flex; 
+    flex-direction: column;
+    padding: 5vw;
+    align-items: center;
+    text-align: center;
+}
+.pro-img{
+    border-radius: 50% ;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border: 0.2vw solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pro-img img{
+    width: 50px;
+}
+.pro-title{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* turn off video: */
+/* video{ display: none; *{ background: #000; } */
 </style>
 <body>
-    <div class="video-container">
-        <video width="100%" preload="auto" loop autoplay muted>
-            <source src='src/video/epvideo.mp4' type='video/mp4' />
-            <source src='src/video/explore.mp4' type='video/mp4' />
-            <source src='src/video/explore.webm' type='video/webm' />
-        </video>
-        <img class="logo" src="src/logo.svg" alt="e-Pies">
-        <nav">
-            <ul class="top-bar">     
-                <li>Option 1</li>
-                <li>Option 2</li>
-                <li>Etyka</li>
-            </ul>
-        </nav>
-        <header>
-            <h1>Piesik od Pokoleń</h1>
-            <h2>Psie mięso to przyszłość!</h2>
-        </header>
-    </div>
+    <div class="container">
+        <div class="video-container">
+            <video width="100%" preload="auto" loop autoplay muted>
+                <source src='src/video/epvideo.mp4' type='video/mp4' />
+                <source src='src/video/explore.mp4' type='video/mp4' />
+                <source src='src/video/explore.webm' type='video/webm' />
+            </video>
+            <img class="logo" src="src/logo.svg" alt="e-Pies">
+            <nav">
+                <ul class="top-bar">     
+                    <li>Option 1</li>
+                    <li>Option 2</li>
+                    <li>Etyka</li>
+                </ul>
+            </nav>
+            <header>
+                <h1>Piesik od Pokoleń</h1>
+                <h2>Psie mięso to przyszłość!</h2>
+            </header>
+        </div>
+        
+        <div class="pros-container">
+            <div class="pro-container">
+                <div class="pro-img">
+                    <img src="src/wiejskiemieso.png" alt="">
+                </div>
+                <span class="pro-title">
+                    <h3>Wiejskie Mięso</h3>
+                </span>
+                <span class="pro-description">
+                Produkty z lokalnego gospodarstwa, a nie hodowli przemysłowych.
+                </span>
+            </div>
 
+            <div class="pro-container">
+                <div class="pro-img">
+                    <img src="src/humanitarnyuboj.png" alt="">
+                </div>
+                <span class="pro-title">
+                    <h3>Humanitarny Ubój</h3>
+                </span>
+                <span class="pro-description">
+                    Dbamy, aby nasze psy były odpowiednio ogłuszone przed zabiciem.
+                </span>
+            </div>
+
+            <div class="pro-container">
+                <div class="pro-img">
+                    <img src="src/wolnywybieg.png" alt="">
+                </div>
+                <span class="pro-title">
+                   <h3>Wolny Wybieg</h3>
+                </span>
+                <span class="pro-description">
+                    Nasze psy mają możliwość przebywania na świeżym powietrzu.
+                </span>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
 </body>
 </html>
