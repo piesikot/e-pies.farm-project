@@ -8,32 +8,50 @@
 <style>
 body, html{
     margin: 0;
-    color: #ffffff
 }
+
 .container{
-    background: #000;
-    z-index: -9;
-    position: absolute;
+    /* background: #000; */
+    z-index: -10;
     max-width: 100%;
+    height: 100%;
 }
 .video-container{
     position: absolute;
     top: 0;
-    bottom: 0;
+    /* bottom: 0; */
     width: 100%;
-    height: 100%; 
-    overflow: hidden;
-    z-index: -10;
+    height: 100%;
+    z-index: -3 ;
+    background: #000;
 }
 .video-container video{
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    z-index: -3;
+    /* Try to fix shrinking video */
+    /* height:100%; */
+    /* object-fit:contain; */
+    /* position: relative;  */
+    /* right: 0;  */
+    /* bottom: 0; */
+    /* min-width: 100%;  */
+    /* min-height:100%; */
+    /* width: auto;  */
+    /* height: auto;  */
+    /* background-size: cover; */
+
+    /* Diffrent approach of fixing shrinking video */
+    /* min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
 }
 .logo{
-    filter: brightness(0) invert(1);
-    width: clamp(25px, 6.5vw, 300px);
-    padding: 2.5vw;
+    /* filter: brightness(0) invert(1); */
+    width: clamp(25px, 6vw, 300px);
+    padding: 2vw;
     }
 .logo-container-media{
     display: none;
@@ -54,11 +72,17 @@ body, html{
     gap: 6vw;
     font-size: clamp(11px, 2vw, 72px);
     margin-bottom: auto;
-}      
-.produkty-list {
+    color:#000000;
+}  
+.menu .farm{
+    text-decoration: underline;
+    cursor: not-allowed;
+} 
+.products-list {
     padding: 0;
-}
-.menu li .produkty-list{
+    cursor: grab;
+}   
+ul li{
     cursor: grab;
 }
 header{
@@ -75,9 +99,17 @@ h1{
 h2{
     font-size: clamp(10px, 1.5vw, 72px);
 }
-.pros-container{
+.wrapper{
+    background-color:#ffffff;
+    /* z-index: -100!important; */
+    /* why not working? */
+    opacity: 0.75;
+
+}
+.adventages-container{
     display: flex; 
     font-size: clamp(8px, 1.5vw, 72px);
+    color: #ffffff;
 }
 .pro-container{
     display: flex; 
@@ -103,9 +135,51 @@ h2{
     text-transform: uppercase;
     font-weight: 800;
 }
-@media only screen and (max-width: 410px){}
-
-
+.farm-description{
+    color:#000;
+    background: #ffffff;
+    /* display: flex; */
+    /* align-items: center; */
+    /* border: dotted 3px rgb(255, 0, 217); */
+    font-size: clamp(8px, 1.5vw, 72px);
+    padding: 20px;
+}
+footer{
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: clamp(8px, 1.5vw, 72px);
+    display: flex;
+    justify-content: center;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer-menu{
+    display: flex;
+    gap: 50px;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+/* fix shrinking video issue */
+@media only screen and (max-width: 420px) {
+    .video-container {
+    width: 100%;
+    z-index: -10;
+    top: 75px;
+    /* why top has white backgroud? */
+    }
+}
+/* Mobile-S resolution */
 @media only screen and (max-width: 320px) {
   .logo-container{
     display: none;
@@ -121,80 +195,107 @@ h2{
   .logo-container-media{
     margin-top: 2.5px;
   }
-}
+  .video-container {
+    top: 100px;
+    }
+} 
 /* turn off video: */
 /* video{ display: none; *{ background: #000; } */
 </style>
 <body>
     <div class="container">
-        <div class="video-container">
-            <video width="100%" preload="auto" loop autoplay muted>
-                <source src='src/video/epvideo.mp4' type='video/mp4' />
-                <source src='src/video/explore.mp4' type='video/mp4' />
-                <source src='src/video/explore.webm' type='video/webm' />
-            </video>
-        </div>
-            <div class="top">
-                <div class="logo-container">
+        <div class="wrapper">
+                <div class="top">
+                    <div class="logo-container">
+                        <img class="logo" src="src/logo.svg" alt="e-Pies">
+                    </div>
+                    <ul class="menu">
+                            <li class="farm">Farma</li>
+                            <li class="news">Aktualności</li>
+                            <ul class="products-list">Produkty
+                                <!-- <li>Psina</li>
+                                <li>Nabiał</li>
+                                <li>Szczenięcina</li>
+                                <li>Kocina</li> -->
+                            </ul>    
+                            <li class="contact">Kontakt</li>
+                            <li class="mission">Nasza Misja</li>
+                    </ul>
+                </div>
+                <div class="logo-container-media">
                     <img class="logo" src="src/logo.svg" alt="e-Pies">
                 </div>
-                <ul class="menu"> 
-                        <li>Dlaczego psy?</li>
-                        <ul class="produkty-list">Produkty
-                            <!-- <li>Psina</li>
-                            <li>Nabiał</li>
-                            <li>Szczenięcina</li>
-                            <li>Kocina</li> -->
-                        </ul>    
-                        <li>Kontakt</li>
-                        <li>Etyka</li>
-                        <li>Nasza Misja</li>
-                </ul>
-            </div>
-            <div class="logo-container-media">
-                <img class="logo" src="src/logo.svg" alt="e-Pies">
-            </div>
-            <header>
-                <h1>Piesik od Pokoleń</h1>
-                <h2>Psie mięso to przyszłość!</h2>
-            </header>
-        
-        <div class="pros-container">
-            <div class="pro-container">
-                <div class="pro-img">
-                    <img src="src/wiejskiemieso.png" alt="">
-                </div>
-                <span class="pro-title">
-                    <h3>Wiejskie Mięso</h3>
-                </span>
-                <span class="pro-description">
-                Produkty z lokalnego gospodarstwa, a nie hodowli przemysłowych.
-                </span>
-            </div>
-
-            <div class="pro-container">
-                <div class="pro-img">
-                    <img src="src/humanitarnyuboj.png" alt="">
-                </div>
-                <span class="pro-title">
-                    <h3>Humanitarny Ubój</h3>
-                </span>
-                <span class="pro-description">
-                    Dbamy, aby nasze psy były odpowiednio ogłuszone przed zabiciem.
-                </span>
-            </div>
-            <div class="pro-container">
-                <div class="pro-img">
-                    <img src="src/wolnywybieg.png" alt="">
-                </div>
-                <span class="pro-title">
-                   <h3>Wolny Wybieg</h3>
-                </span>
-                <span class="pro-description">
-                    Nasze psy mają możliwość przebywania na świeżym powietrzu.
-                </span>
-            </div>
+                <header>
+                    <h1>Piesik od Pokoleń</h1>
+                    <h2>Psie mięso to przyszłość!</h2>
+                </header>
         </div>
+                <div class="adventages-container">
+                    <div class="pro-container">
+                        <div class="pro-img">
+                            <img src="src/wiejskiemieso.png" alt="">
+                        </div>
+                    <span class="pro-title">
+                    <h3>Wiejskie Mięso</h3>
+                    </span>
+                    <span class="pro-description">
+                    Produkty z lokalnego gospodarstwa, a nie hodowli przemysłowych.
+                    </span>
+                </div>
+
+                <div class="pro-container">
+                    <div class="pro-img">
+                        <img src="src/humanitarnyuboj.png" alt="">
+                    </div>
+                    <span class="pro-title">
+                        <h3>Humanitarny Ubój</h3>
+                    </span>
+                    <span class="pro-description">
+                        Dbamy, aby nasze psy były odpowiednio ogłuszone przed zabiciem.
+                    </span>
+                </div>
+                <div class="pro-container">
+                    <div class="pro-img">
+                        <img src="src/wolnywybieg.png" alt="">
+                    </div>
+                    <span class="pro-title">
+                    <h3>Wolny Wybieg</h3>
+                    </span>
+                    <span class="pro-description">
+                        Nasze psy mają możliwość przebywania na świeżym powietrzu.
+                    </span>
+                </div>
+
+                <div class="video-container">
+                    <video width="100%" preload="auto" loop autoplay muted>
+                        <source src='src/video/epvideo.mp4' type='video/mp4' />
+                        <source src='src/video/explore.mp4' type='video/mp4' />
+                        <source src='src/video/explore.webm' type='video/webm' />
+                    </video>
+                </div>
+            </div>
     </div>
+        
+    <div class="farm-description">
+            <span class="description-title">
+            <!-- https://sokolow.pl/produkty/wieprzowina/bez-antybiotykow -->
+            </span>
+            <!-- https://sokolowsa.pl/wydarzenia/sokolow-jako-pierwsza-polska-firma-ze-zgoda-na-eksport-wolowiny-do-chin -->
+            <!-- <h3>Psie mięso to przyszłość!</h3> -->
+            
+            <!-- <div class="farm-description__img-container">
+                <img src="src/dogsoffuture.png" alt="">
+                <span class="pro-description">
+                W ramach programu „Psie mięso to Przyszłość” budujemy przyszłość zdrowego jedzenia. Dzięki współpracy z polskimi rolnikami i możliwości kontroli na każdym etapie produkcji możemy mieć pewność, że produkujemy najwyższej jakości mięso i wędliny.            </span>-->
+                <!-- a href zobacz więcej https://sokolowsa.pl/firma/razem-w-przyszlosc -->
+                <!-- Pertycja o zakaz roślinnego jedzenia -->
+        </div> 
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-menu"><span>DOBROSTAN ZWIERZĄT</span><span>POLITYKA FIRMY</span><span>PARTNERZY</span></div>
+            <div class="copyright"><span>COPYRIGHT e-Pies WSZELKIE PRAWA ZASTRZEŻONE </span></div>
+            <div><span><a href="http://www.piesikot.co">CREATED BY PiesikCorp Agency</a></span></div>
+        </div>
+    </footer>
 </body>
 </html>
