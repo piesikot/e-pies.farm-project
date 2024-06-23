@@ -74,7 +74,7 @@ body, html{
     margin-bottom: auto;
     color:#000000;
 }  
-.menu .farm{
+.menu .menu__farm{
     text-decoration: underline;
     cursor: not-allowed;
 } 
@@ -135,14 +135,22 @@ h2{
     text-transform: uppercase;
     font-weight: 800;
 }
-.farm-description{
+.farm{
     color:#000;
     background: #ffffff;
-    /* display: flex; */
-    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
     /* border: dotted 3px rgb(255, 0, 217); */
     font-size: clamp(8px, 1.5vw, 72px);
-    padding: 20px;
+    padding: 40px;
+}
+.farm__farm-title{
+    font-size: clamp(10px, 2vw, 72px);
+}
+.farm__farm-description{
+    text-align: center;
 }
 footer{
     background: #000;
@@ -210,16 +218,16 @@ a{
                         <img class="logo" src="src/logo.svg" alt="e-Pies">
                     </div>
                     <ul class="menu">
-                            <li class="farm">Farma</li>
-                            <li class="news">Aktualności</li>
-                            <ul class="products-list">Produkty
+                            <li class="menu__farm">Farma</li>
+                            <li class="mwnu__news">Aktualności</li>
+                            <ul class="menu__products-list">Produkty
                                 <!-- <li>Psina</li>
                                 <li>Nabiał</li>
                                 <li>Szczenięcina</li>
                                 <li>Kocina</li> -->
                             </ul>    
-                            <li class="contact">Kontakt</li>
-                            <li class="mission">Nasza Misja</li>
+                            <li class="menu__contact">Kontakt</li>
+                            <li class="menu__mission">Nasza Misja</li>
                     </ul>
                 </div>
                 <div class="logo-container-media">
@@ -249,7 +257,6 @@ a{
                     <div class="pro-img">
                         <img src="src/hand_with_knife.png" alt="">
                         <!-- Image by <a href=" https://www.vectorportal.com" >Vectorportal.com</a>,  <a class="external text" href="https://creativecommons.org/licenses/by/4.0/" >CC BY</a> -->
-
                     </div>
                     <span class="pro-title">
                         <h3>Humanitarny Ubój</h3>
@@ -281,10 +288,12 @@ a{
             </div>
     </div>
         
-    <div class="farm-description">
-            <span class="description-title">
+    <div class="farm">
+            <img class="farm__farm-img" src="src/produkt-polski.png" alt="PRODUKT POLSKI">
+            <h4 class="farm__farm-title">Mięso z tuczu bez antybiotyków</h4>
+            <span class="farm__farm-description">Głównym celem i przesłaniem prowadzenia tuczu bez użycia antybiotyków jest obniżenie do niezbędnego minimum stosowania antybiotyków, przekazywanie wiedzy  producentom o zasadach i możliwości prowadzenia tuczu bez antybiotyków, koordynacja przebiegu tuczu oraz zabezpieczenie wysokiej jakości surowca do produktów spełniających oczekiwania naszych konsumentów.</span>
             <!-- https://sokolow.pl/produkty/wieprzowina/bez-antybiotykow -->
-            </span>
+
             <!-- https://sokolowsa.pl/wydarzenia/sokolow-jako-pierwsza-polska-firma-ze-zgoda-na-eksport-wolowiny-do-chin -->
             <!-- <h3>Psie mięso to przyszłość!</h3> -->
             
@@ -294,7 +303,7 @@ a{
                 W ramach programu „Psie mięso to Przyszłość” budujemy przyszłość zdrowego jedzenia. Dzięki współpracy z polskimi rolnikami i możliwości kontroli na każdym etapie produkcji możemy mieć pewność, że produkujemy najwyższej jakości mięso i wędliny.            </span>-->
                 <!-- a href zobacz więcej https://sokolowsa.pl/firma/razem-w-przyszlosc -->
                 <!-- Pertycja o zakaz roślinnego jedzenia -->
-        </div> 
+    </div> 
     <footer>
         <div class="footer-wrapper">
             <div class="footer-menu"><span>DOBROSTAN ZWIERZĄT</span><span>POLITYKA FIRMY</span><span>PARTNERZY</span></div>
