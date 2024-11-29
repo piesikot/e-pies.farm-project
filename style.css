@@ -141,12 +141,16 @@ h2{
     font-size: clamp(8px, 1.5vw, 72px);
     padding: 40px;
 }
+.farm__farm-img{
+    width: 30%;
+}
 .farm__farm-title{
     font-size: clamp(10px, 2vw, 72px);
 }
 .farm__farm-description{
     text-align: center;
 }
+
 .chart{
     width: 80%;
 }
