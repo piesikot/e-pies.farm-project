@@ -70,6 +70,9 @@ body, html{
     text-decoration: underline;
     cursor: not-allowed;
 } 
+.menu .menu__products-list{
+    padding: 0;
+}
 .products-list {
     padding: 0;
     cursor: grab;
