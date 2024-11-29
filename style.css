@@ -66,12 +66,17 @@ body, html{
     margin-bottom: auto;
     color:#000000;
 }  
+.menu a{
+    color: #000000;
+    text-decoration: none;
+}
 .menu .menu__farm{
     text-decoration: underline;
     cursor: not-allowed;
 } 
 .menu .menu__products-list{
     padding: 0;
+    cursor: grab;
 }
 .products-list {
     padding: 0;
@@ -176,7 +181,7 @@ footer{
     display: flex;
     justify-content: center;
 }
-a{
+span a{
     color: #ffffff;
     text-decoration: none;
 }
