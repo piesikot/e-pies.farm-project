@@ -1,0 +1,206 @@
+body, html{
+    margin: 0;
+}
+
+.container{
+    /* background: #000; */
+    z-index: -10;
+    max-width: 100%;
+    height: 100%;
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    /* bottom: 0; */
+    width: 100%;
+    height: 100%;
+    z-index: -3 ;
+    background: #000;
+}
+.video-container video{
+    width: 100%;
+    z-index: -3;
+    /* Try to fix shrinking video */
+    /* height:100%; */
+    /* object-fit:contain; */
+    /* position: relative;  */
+    /* right: 0;  */
+    /* bottom: 0; */
+    /* min-width: 100%;  */
+    /* min-height:100%; */
+    /* width: auto;  */
+    /* height: auto;  */
+    /* background-size: cover; */
+
+    /* Diffrent approach of fixing shrinking video */
+    /* min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+}
+.logo{
+    /* filter: brightness(0) invert(1); */
+    width: clamp(25px, 6vw, 300px);
+    padding: 2vw;
+    }
+.logo-container-media{
+    display: none;
+}
+.top{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.bottom{
+    display: none;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0vw 3vw 0 3vw;
+    list-style:none;
+    gap: 6vw;
+    font-size: clamp(11px, 2vw, 72px);
+    margin-bottom: auto;
+    color:#000000;
+}  
+.menu .menu__farm{
+    text-decoration: underline;
+    cursor: not-allowed;
+} 
+.products-list {
+    padding: 0;
+    cursor: grab;
+}   
+ul li{
+    cursor: grab;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+}
+h1{
+    text-align: center;
+    font-size: clamp(22px, 4vw, 148px);
+    margin: 0;
+}
+h2{
+    font-size: clamp(10px, 1.5vw, 72px);
+}
+.wrapper{
+    background-color:#ffffff;
+    /* z-index: -100!important; */
+    /* why not working? */
+    opacity: 0.5;
+
+}
+.adventages-container{
+    display: flex; 
+    font-size: clamp(8px, 1.5vw, 72px);
+    color: #ffffff;
+}
+.pro-container{
+    display: flex; 
+    flex-direction: column;
+    padding: 5vw;
+    align-items: center;
+    text-align: center;
+}
+.pro-img{
+    border-radius: 50%;
+    color: white;
+    width: 9vw;
+    height: 9vw;
+    border: 0.2vw solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pro-img img{
+    width: 6vw;
+}
+.pro-title{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.farm{
+    color:#000;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    /* border: dotted 3px rgb(255, 0, 217); */
+    font-size: clamp(8px, 1.5vw, 72px);
+    padding: 40px;
+}
+.farm__farm-title{
+    font-size: clamp(10px, 2vw, 72px);
+}
+.farm__farm-description{
+    text-align: center;
+}
+.chart{
+    width: 80%;
+}
+footer{
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: clamp(8px, 1.5vw, 72px);
+    display: flex;
+    justify-content: center;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer-menu{
+    display: flex;
+    gap: 50px;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+/* fix shrinking video issue */
+@media only screen and (max-width: 420px) {
+    .video-container {
+    width: 100%;
+    z-index: -10;
+    top: 75px;
+    /* why top has white backgroud? */
+    }
+}
+/* Mobile-S resolution */
+@media only screen and (max-width: 320px) {
+  .logo-container{
+    display: none;
+  }
+  .logo-container-media{
+    display: block;
+    position: absolute;
+    margin-top: -5px;
+  }
+  h1{
+    margin-top: 10px
+  }
+  .logo-container-media{
+    margin-top: 2.5px;
+  }
+  .video-container {
+    top: 100px;
+    }
+} 
+/* turn off video: */
+/* video{ display: none; *{ background: #000; } */
