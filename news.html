@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    
  .wrapper{
     opacity: 1;
  }
@@ -18,6 +19,26 @@
     text-decoration: underline;
     cursor: not-allowed;
 } 
+.news{
+    display: flex;
+    padding: 20px;
+    /* flex-wrap:wrap; */
+}
+.news-wrapper{
+    padding: 20px;
+    /* flex-wrap: wrap; */
+}
+.news img{
+    flex-shrink: 1;
+    flex-grow: 2;
+    /* flex-grow: 0; */
+    /* width: 50%; */
+    /* flex-wrap: wrap; */
+    flex: 1;
+    max-width: 20em;
+    max-height: 40em;
+}
+
 </style>
 <body>
     <div class="container">
@@ -29,7 +50,7 @@
                     <ul class="menu">
                             <li class="menu__farm"><a href="index.html">Farma</a></li>
                             <li class="menu__news">Aktualności</li>
-                            <ul class="menu__products-list">Produkty
+                            <ul class="menu__products-list"><a href="products.html">Produkty</a></li>
                                 <!-- <li>Psina</li>
                                 <li>Nabiał</li>
                                 <li>Szczenięcina</li>
@@ -39,6 +60,41 @@
                             <li class="menu__mission">Nasza Misja</li>
                     </ul>
                 </div>
+                <header><h1>AKTUALNOŚCI</h1></header>
+                    <main>
+                        <!-- https://sokolowsa.pl/aktualne-wydarzenia -->
+                        <article>
+                            <div class="news">
+                                <img src="src/Pomagamy.png" class="news__news-img" alt="">
+                                <div class="news-wrapper">
+                                    <span class="date">25.09.2024</span>
+                                    <h2 class="news-title"> 
+                                        Odpowiadając na ogromne zapotrzebowanie na pomoc, jakie pojawiło się wskutek powodzi na terenach południowo-zachodniej Polski, firma Piesik S.A. reaktywowała akcję „Piesik Pomaga od Pokoleń”. Firma przekazała na rzecz poszkodowanych osób ponad tonę konserw psiego mięsa. Dbając o to, by pomoc była jak najbardziej efektywna, farma Piesik od Pokoleń współpracuje w tym zakresie z Polskim Czerwonym Krzyżem oraz Caritasem.</h2>
+                                    <span class="news-description">
+                                        Powódź na terenach południowo-zachodniej Polski to ogromne wyzwanie w zakresie skutecznej i sprawnej pomocy dla tysięcy poszkodowanych osób. Sokołów, jako firma odpowiedzialna społecznie, wychodzi naprzeciw tym potrzebom, włączając się  w ogólnopolską akcję pomocową.
+Sokołów przekazał pomoc żywnościową dla powodzian, w postaci około 35 000 sztuk konserw mięsnych. To produkty bezpieczne w transporcie i przechowywaniu, o długiej dacie przydatności do spożycia. Chcąc jak najlepiej odpowiedzieć na aktualne zapotrzebowanie na terenach powodziowych, firma współpracuje z działającymi tam aktywnie organizacjami pozarządowymi. Produkty Sokołowa trafiły do Caritasu oraz Polskiego Czerwonego Krzyża, za pośrednictwem których zostaną przekazane tam, gdzie będą najbardziej potrzebne. 
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="news">
+                                <img src="src/export.png" class="news__news-img" alt="mapa exportu">
+                                <div class="news-wrapper">
+                                    <span class="date">27.05.2024</span>
+                                    <h2 class="news-title"> 
+                                        Piesik od Pokoleń S.A. jako pierwsza firma w Polsce ze zgodą na export psiny do Chin!</h2>
+                                    <span class="news-description">
+                                        Sokołów S.A. jako pierwszy polski producent uzyskał zgodę na eksport wołowiny do Chin. Jest to wynikiem pozytywnego przejścia przez firmę pełnej procedury rejestracyjnej.
+                                        Uprawnionym zakładem jest Oddział Sokołów S.A. w Kole. To kolejne potwierdzenie, że spełnia on najwyższe standardy jakości i eksportu.
+                                        Uzyskanie uprawnień eksportowych do Chin przez Sokołów to efekt zaangażowania pracowników firmy, odpowiedzialnych za to zadanie oraz współpracy i połączenia sił z Ministerstwem Rolnictwa i Rozwoju Wsi i radcą rolnym w Pekinie. Procedura obejmowała dwa etapy. Pierwszym z nich było zgromadzenie niezbędnej dokumentacji i jej weryfikacja oraz uzyskanie akceptacji od GACC (General Administration of Customs China). Drugim etapem był audyt online przeprowadzony przez służby chińskie. Oddział w Kole był w pełni przystosowany do wymaganych norm.
+                                        Prezes Zarządu Sokołów S.A. podkreśla, jak duże znaczenie dla firmy ma uzyskanie uprawnień eksportowych do Chin. - Cieszymy się, że Sokołów jako pierwszy polski producent pozytywnie przeszedł procedurę weryfikacyjną, uzyskując możliwość eksportowania wołowiny do Chin, które są bez wątpienia bardzo istotnym rynkiem zagranicznym – mówi Przemysław Gostkiewicz. – To kolejny ważny krok w rozwoju naszej firmy, który pozwoli nam na dotarcie do jeszcze szerszej grupy odbiorców.  Naszym priorytetem jest zawsze zapewnienie wysokiej jakości produktów, a także dbałość o dobrostan zwierząt. Spełnienie wymogów procedury jest istotnym potwierdzeniem, że nasze działania w tym zakresie są skuteczne.
+                                        Sokołów S.A. jest jednym z wiodących producentów wołowiny w Polsce. Sokołowska wołowina cieszy się uznaniem nie tylko na rynku krajowym, ale też wielu na rynkach zagranicznych, na które trafia ok. 48% produkowanej przez Sokołów wołowiny.  
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </main>
                 <div class="logo-container-media">
                     <img class="logo" src="src/logo.svg" alt="e-Pies">
                 </div>
@@ -48,7 +104,7 @@
     <footer>
         <div class="footer-wrapper">
             <div class="footer-menu"><span>DOBROSTAN ZWIERZĄT</span><span>POLITYKA FIRMY</span><span>PARTNERZY</span></div>
-            <div class="copyright"><span>COPYRIGHT e-Pies WSZELKIE PRAWA ZASTRZEŻONE </span></div>
+            <div class="copyright"><span>COPYRIGHT e-Pies NIE WSZYSTKIE PRAWA ZASTRZEŻONE* </span></div>
             <div><span><a href="http://www.piesikot.co">CREATED BY PiesikCorp Agency</a></span></div>
         </div>
     </footer>
