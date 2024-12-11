@@ -18,6 +18,23 @@
     text-decoration: underline;
     cursor: not-allowed;
 } 
+.products-header{
+    background-image: url(src/cold-cuts-header-bg_6.jpg);
+}
+
+.x{
+    background: black;
+    width: 100px;
+    height: 100px;
+    border: solid red 3px;
+    gap :20px;
+}
+.products-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 </style>
 <body>
     <div class="container">
@@ -39,10 +56,22 @@
                             <li class="menu__mission">Nasza Misja</li>
                     </ul>
                 </div>
-                <header><h1>PRODUKTY</h1></header>
-                    <main>
-                        <!-- https://sokolow.pl/produkty -->
-                   </main>
+                <div class="products-container">
+                        <div><img class="products-container__products-header-img" src="src/cold-cuts-header-image.png" alt="Psie Mięsto na Desce do krojenia mięsa"></div>
+                        <div><h1 class="products-container__products-header-title">PRODUKTY</h1></div>
+                        <div class="products-container__products-header-description">Czy wiesz, że nasze produkty są dostępne w ponad 40 krajach na całym świecie, w tym w całej Unii Europejskiej, USA, na Wybrzeżu Kości Słoniowej i w Zjednoczonych Emiratach Arabskich</div>
+                        <div class="products-container__products-header-footer">Na stronie internetowej prezentujemy wybrane produkty.
+                            Informacje o pełnej ofercie produktowej można uzyskać w sklepach firmowych i centrach dystrybucji.</div>
+                        
+                        </div>
+
+                    <main products-container__products-main>
+                            <!-- https://sokolow.pl/produkty -->
+                            <div class="products-main">
+
+                            </div>
+                    </main>
+                </div>
         </div> 
     </div> 
     <footer>
