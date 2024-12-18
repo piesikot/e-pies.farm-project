@@ -22,18 +22,31 @@
     background-image: url(src/cold-cuts-header-bg_6.jpg);
 }
 
-.x{
-    background: black;
-    width: 100px;
-    height: 100px;
-    border: solid red 3px;
-    gap :20px;
-}
+
 .products-container{
-    display: flex;
+    display: flex;      
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0 60px;
+}
+.products-container__wrap{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 0 20px;
+}
+.products-container__products-header-img{
+    width:200px;
+    padding: 0 10px;
+}
+.products-container__products-header-description, .products-container__products-header-footer{
+    padding: 0 10px;
+}
+.products-container__products-header-description h2{
+    font-size: 20px;
+}
+.products-container__products-header-footer{
+
 }
 </style>
 <body>
@@ -57,13 +70,17 @@
                     </ul>
                 </div>
                 <div class="products-container">
-                        <div><img class="products-container__products-header-img" src="src/cold-cuts-header-image.png" alt="Psie Mięsto na Desce do krojenia mięsa"></div>
-                        <div><h1 class="products-container__products-header-title">PRODUKTY</h1></div>
-                        <div class="products-container__products-header-description">Czy wiesz, że nasze produkty są dostępne w ponad 40 krajach na całym świecie, w tym w całej Unii Europejskiej, USA, na Wybrzeżu Kości Słoniowej i w Zjednoczonych Emiratach Arabskich</div>
-                        <div class="products-container__products-header-footer">Na stronie internetowej prezentujemy wybrane produkty.
-                            Informacje o pełnej ofercie produktowej można uzyskać w sklepach firmowych i centrach dystrybucji.</div>
-                        
-                        </div>
+                    <div><img class="products-container__products-header-img" src="src/cold-cuts-header-image.png" alt="Psie Mięsto na Desce do krojenia mięsa">
+                    </div>
+                    <div class="products-container__wrap">
+                                <h1 id="id="products-container__products-header-title">Produkty</h1>
+                            <div class="products-container__products-header-description"><h2>Czy wiesz, że nasze produkty są dostępne w ponad 40 krajach na całym świecie, w tym w całej Unii Europejskiej, USA, na Wybrzeżu Kości Słoniowej i w Zjednoczonych Emiratach Arabskich?</h2>
+                            </div>
+                            <div class="products-container__products-header-footer">Na stronie internetowej prezentujemy wybrane produkty.
+                                Informacje o pełnej ofercie produktowej można uzyskać w sklepach firmowych i centrach dystrybucji.
+                            </div>
+                    </div>
+                </div>
 
                     <main products-container__products-main>
                             <!-- https://sokolow.pl/produkty -->
@@ -73,6 +90,7 @@
                     </main>
                 </div>
         </div> 
+        
     </div> 
     <footer>
         <div class="footer-wrapper">
