@@ -7,7 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
- 
+    .alert{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    left: 0;
+    right: 0;
+    top: 5%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    }
+ .alert img{
+    height: 80%;
+    width: 80%;
+    /* opacity: 0.8; */
+    border: solid 10px red;
+    
+ }
+ .alert span{
+    z-index: 1;
+    font-size: 4vw;
+    position: absolute;
+    color: red;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    flex-wrap: wrap;
+    height: 40%;
+    width: 80%;
+    padding: 20px;
+    
+ }
+ .alert button{
+    position: absolute;
+    height: 10%;
+    width: 15vw;
+    bottom: 20%;
+ }
 </style>
 <body>
     <div class="container">
@@ -36,19 +76,19 @@
                     <h1>Piesik od Pokoleń S.A.</h1>
                     <h2>Psie mięso to przyszłość!</h2>
                 </header>
-        </div>
-                <div class="adventages-container">
-                    <div class="pro-container">
-                        <div class="pro-img">
+            </div>
+            <div class="adventages-container">
+                <div class="pro-container">
+                    <div class="pro-img">
                             <img src="src/farmland_6053534.png" alt="">
                             <!-- <a href="https://www.freepik.com/icon/farmland_6053534#fromView=search&page=1&position=17&uuid=78340bdf-9862-4fe8-b973-14d16b456c39">Icon by smashingstocks</a> -->
                             
-                        </div>
+                    </div>
                     <span class="pro-title">
-                    <h3>Wiejskie Mięso</h3>
-                    </span>
-                    <span class="pro-description">
-                    Produkty z lokalnego gospodarstwa, a nie hodowli przemysłowych.
+                        <h3>Wiejskie Mięso</h3>
+                        </span>
+                        <span class="pro-description">
+                        Produkty z lokalnego gospodarstwa, a nie hodowli przemysłowych.
                     </span>
                 </div>
 
@@ -84,8 +124,8 @@
                         <source src='src/video/explore.webm' type='video/webm' />
                     </video>
                 </div>
-            </div>
     </div>
+        </div>
         
     <div class="farm">
             <img class="farm__farm-img" src="src/produkt-polski.png" alt="PRODUKT POLSKI">
@@ -103,7 +143,7 @@
                 W ramach programu „Psie mięso to Przyszłość” budujemy przyszłość zdrowego jedzenia. Dzięki współpracy z polskimi rolnikami i możliwości kontroli na każdym etapie produkcji możemy mieć pewność, że produkujemy najwyższej jakości mięso i wędliny.            </span>-->
                 <!-- a href zobacz więcej https://sokolowsa.pl/firma/razem-w-przyszlosc -->
                 <!-- Pertycja o zakaz roślinnego jedzenia -->
-    </div> 
+        </div>
     <footer>
         <div class="footer-wrapper">
             <div class="footer-menu"><span>DOBROSTAN ZWIERZĄT</span><span>POLITYKA FIRMY</span><span>PARTNERZY</span></div>
@@ -111,5 +151,19 @@
             <div><span><a href="http://www.piesikot.co">CREATED BY PiesikCorp Agency</a></span></div>
         </div>
     </footer>
+
+    <div class="alert">
+        <img src="src/websiteunderconstruction.jpg" alt="">
+        <button id="alert-button">OK</button>
+    </div> 
+
+<script>
+    let alert_window = document.querySelector('.alert');
+    let alert_button = document.querySelector('#alert-button');
+    
+    alert_button.addEventListener('click', (e) => {
+        alert_window.style.display = 'none';
+    } );
+</script>
 </body>
 </html>
