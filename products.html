@@ -18,40 +18,54 @@
     text-decoration: underline;
     cursor: not-allowed;
 } 
-.products-header{
-    background-image: url(src/cold-cuts-header-bg_6.jpg);
-}
 
-
-.products-container{
+.products-header-container{
     display: flex;      
     justify-content: center;
     align-items: center;
     padding: 0 60px;
 }
-.products-container__wrap{
+
+.products-container__products-header-description h2{
+    font-size: clamp(10px, 1.5vw, 72px);
+}
+.products-container__products-header-footer{
+    /* font-size: clamp(10px, 1.3vw, 72px);  */
+    font-size: clamp(8px, 1.5vw, 72px);
+}
+
+.products-header-container__products-header-img{
+    width:200px;
+    padding: 0 10px;
+}
+.products-header-container__wrap{
     display: flex;
     flex-direction: column;
     gap:10px;
     padding: 0 20px;
 }
-.products-container__products-header-img{
-    width:200px;
-    padding: 0 10px;
-}
-.products-container__products-header-description, .products-container__products-header-footer{
-    padding: 0 10px;
-}
-.products-container__products-header-description h2{
-    font-size: 20px;
-}
-.products-container__products-header-footer{
 
+.products-main-container__products-main{
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    /* flex-direction: column; */
 }
+.products-main-container__products-main__products-main-title h3{
+    padding: 20px;
+    font-weight: 666;
+}
+.products-main-container__products-main__products-main-description{
+    font-size: clamp(10px, 1.5vw, 72px);
+}
+
+
 </style>
 <body>
     <div class="container">
         <div class="wrapper">
+
                 <div class="top">
                     <div class="logo-container">
                         <img class="logo" src="src/logo.svg" alt="e-Pies">
@@ -69,11 +83,14 @@
                             <li class="menu__mission">Nasza Misja</li>
                     </ul>
                 </div>
-                <div class="products-container">
-                    <div><img class="products-container__products-header-img" src="src/cold-cuts-header-image.png" alt="Psie Mięsto na Desce do krojenia mięsa">
+                
+                
+                <h1>Produkty</h1>
+
+                <div class="products-header-container">
+                    <div><img class="products-header-container__products-header-img" src="src/cold-cuts-header-image.png" alt="Psie Mięsto na Desce do krojenia mięsa">
                     </div>
-                    <div class="products-container__wrap">
-                                <h1 id="id="products-container__products-header-title">Produkty</h1>
+                    <div class="products-header-container__wrap">
                             <div class="products-container__products-header-description"><h2>Czy wiesz, że nasze produkty są dostępne w ponad 40 krajach na całym świecie, w tym w całej Unii Europejskiej, USA, na Wybrzeżu Kości Słoniowej i w Zjednoczonych Emiratach Arabskich?</h2>
                             </div>
                             <div class="products-container__products-header-footer">Na stronie internetowej prezentujemy wybrane produkty.
@@ -82,16 +99,18 @@
                     </div>
                 </div>
 
-                    <main products-container__products-main>
+                    <main>
+                        <div class="products-main-container"></div>
                             <!-- https://sokolow.pl/produkty -->
-                            <div class="products-main">
-
+                            <div class="products-main-container__products-main">
+                                <span class="products-main-container__products-main__products-main-title"><h3>Mięso</h3></span>
+                                <span class="products-main-container__products-main__products-main-description">Hodowla zwierząt i produkcja mięsa jest naszą pasją! Z zaangażowaniem dostarczamy psie, kocie, i królicze mięso naszym klientom, głęboko wierząc, że najwyższą jakość osiągamy dzięki połączeniu nowoczesnych rozwiązań, ciężkiej pracy, miłości do zwierząt i współpracy z polskimi , a także nawet i zagranicznymi rolnikami. Kontrolujemy każdy etap produkcji, by tworzyć mięso, które jest owocem naszej pasji i doświadczenia, by mogło trafić na Twój stół!</span>
                             </div>
                     </main>
                 </div>
         </div> 
-        
     </div> 
+
     <footer>
         <div class="footer-wrapper">
             <div class="footer-menu"><span>DOBROSTAN ZWIERZĄT</span><span>POLITYKA FIRMY</span><span>PARTNERZY</span></div>
