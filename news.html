@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    
- .wrapper{
+.wrapper{
     opacity: 1;
  }
  .menu .menu__farm{
@@ -20,25 +19,39 @@
     cursor: not-allowed;
 } 
 .news{
-    display: flex;
+    /* display: flex; */
     padding: 20px;
-    /* flex-wrap:wrap; */
-}
+    /* width ustawić */
+    /* width: 80%; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    }
 .news-wrapper{
     padding: 20px;
     /* flex-wrap: wrap; */
+    /* align-items: self-start; */
 }
 .news img{
-    flex-shrink: 1;
-    flex-grow: 2;
+    /* flex-shrink: 1; */
+    /* flex-grow: 2; */
     /* flex-grow: 0; */
     /* width: 50%; */
     /* flex-wrap: wrap; */
-    flex: 1;
-    max-width: 20em;
-    max-height: 40em;
+    /* flex: 1; */
+    max-width: 15em;
+    /* max-height: 40em; */
+    display: none;
 }
-
+.news-title{
+    font-size: font-size: clamp(22px, 4vw, 148px);
+}
+.news-description{
+    font-size: clamp(8px, 1.5vw, 72px);
+}
+.news-date{
+    font-size: clamp(8px, 1.5vw, 72px);
+    font-weight: 900;
+}
 </style>
 <body>
     <div class="container">
@@ -60,29 +73,31 @@
                             <li class="menu__mission">Nasza Misja</li>
                     </ul>
                 </div>
-                <header><h1>AKTUALNOŚCI</h1></header>
+                <header><h1>AKTUALNOŚCI Z FARMY</h1></header>
                     <main>
                         <!-- https://sokolowsa.pl/aktualne-wydarzenia -->
                         <article>
                             <div class="news">
-                                <img src="src/Pomagamy.png" class="news__news-img" alt="">
+
                                 <div class="news-wrapper">
-                                    <span class="date">25.09.2024</span>
+                                    <img src="src/Pomagamy.png" class="news__news-img" alt="">
+                                    <span class="news-date">25.09.2024</span>
                                     <h2 class="news-title"> 
                                         W odpowiedzi na ogromne potrzeby pomocy po powodzi na południowo-zachodnich terenach Polski, firma Piesik S.A. wznowiła akcję „Piesik Pomaga od Pokoleń”. Przekazano ponad tonę konserw psiego mięsa dla poszkodowanych, współpracując z Polskim Czerwonym Krzyżem i Caritasem.</h2>
                                     <span class="news-description">
                                         Powódź na południowo-zachodnich terenach Polski stworzyła ogromne wyzwanie w organizacji skutecznej pomocy dla tysięcy poszkodowanych. Firma Piesik od Pokoleń, znana z odpowiedzialności społecznej, aktywnie wspiera ogólnopolską akcję pomocową.
 
-Piesik od Pokoleń przekazała około 35 000 konserw mięsnych – trwałych, łatwych w transporcie i o długim terminie przydatności. Aby skutecznie odpowiedzieć na potrzeby powodzian, firma współpracuje z organizacjami pozarządowymi działającymi na zalanych obszarach. Przekazane produkty, dzięki Caritasowi i Polskiemu Czerwonemu Krzyżowi, trafią tam, gdzie są najbardziej potrzebne.
+                                        Piesik od Pokoleń przekazała około 35 000 konserw mięsnych – trwałych, łatwych w transporcie i o długim terminie przydatności. Aby skutecznie odpowiedzieć na potrzeby powodzian, firma współpracuje z organizacjami pozarządowymi działającymi na zalanych obszarach. Przekazane produkty, dzięki Caritasowi i Polskiemu Czerwonemu Krzyżowi, trafią tam, gdzie są najbardziej potrzebne.
                                     </span>
                                 </div>
                             </div>
                         </article>
                         <article>
                             <div class="news">
-                                <img src="src/export.png" class="news__news-img" alt="mapa exportu">
+                                
                                 <div class="news-wrapper">
-                                    <span class="date">27.05.2024</span>
+                                    <img src="src/export.png" class="news__news-img" alt="mapa exportu">
+                                    <span class="news-date">27.05.2024</span>
                                     <h2 class="news-title"> 
                                         Piesik od Pokoleń S.A. jako pierwsza firma w Polsce ze zgodą na export psiny do Chin!</h2>
                                     <span class="news-description">
@@ -91,8 +106,9 @@ Piesik od Pokoleń przekazała około 35 000 konserw mięsnych – trwałych, ł
                                         Procedura uzyskania zgody obejmowała dwa etapy: zebranie i weryfikację dokumentacji przez GACC (General Administration of Customs China) oraz audyt online przeprowadzony przez chińskie służby. Oddział w Koronowie był w pełni dostosowany do wymaganych norm. Dzięki zaangażowaniu pracowników firmy oraz współpracy z Ministerstwem Rolnictwa i Rozwoju Wsi i radcą rolnym w Pekinie, proces zakończył się sukcesem.
                                         
                                         Prezes Zarządu, Emil Piesik, podkreślił znaczenie tego osiągnięcia: – Jesteśmy dumni, że jako pierwsi w Polsce uzyskaliśmy możliwość eksportu psiny do Chin, jednego z kluczowych rynków zagranicznych. To ważny krok w rozwoju naszej firmy, który pozwoli nam dotrzeć do szerszego grona odbiorców, przy jednoczesnym utrzymaniu najwyższych standardów jakości i troski o dobrostan zwierząt..  
+                                        Piesik od Pokoleń S.A., jako jeden z czołowych producentów psiny w Polsce, eksportuje ok. 48% swojej produkcji, a koronowska psina cieszy się uznaniem zarówno w kraju, jak i na rynkach zagranicznych.
                                     </span>
-                                </div>
+                                
                             </div>
                         </article>
                     </main>
