@@ -144,7 +144,7 @@ h2{
     flex-direction:column;
     /* border: dotted 3px rgb(255, 0, 217); */
     font-size: clamp(8px, 1.5vw, 72px);
-    padding: 40px;
+    padding: 40px 0;
 }
 .farm__farm-img{
     width: 30%;
