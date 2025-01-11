@@ -18,7 +18,22 @@
     text-decoration: underline;
     cursor: not-allowed;
 }
-
+.contact-main-container img{
+    width: 100px;
+}
+.contact-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+.contact-main-container__facebook, .contact-main-container__messenger, .contact-main-container__instagram, .contact-main-container__whatsapp{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
 </style>
 <body>
     <div class="container">
@@ -43,25 +58,16 @@
                 </div>
                 
                 <h1>KONTAKT:</h1>
-
-                <!-- https://sokolow.pl/ -->
-
-                <!-- <div class="products-header-container">
-                    <div><img class="products-header-container__products-header-img" src="src/international_2206535.png" alt="">
-                    </div>
-                    <div class="products-header-container__wrap">
-                            <div class="products-container__products-header-description"><h2>Czy wiesz, że nasze produkty są dostępne w wielu krajacha krajach na całym świecie? W tym w Brazyli, Bułgarii, Danii, Finlandi, Francji, Niemczech, Holandi, Norwegii i Hiszpani?</h2>
-                               
-                            </div>
-                            <div class="products-container__products-header-footer">Na stronie internetowej prezentujemy wybrane produkty.
-                                Informacje o pełnej ofercie produktowej można uzyskać w sklepach firmowych i centrach dystrybucji.
-                            </div>
-                    </div>
-                </div> -->
     
-                    <main>
+                <main>
+                <div class="contact-main-container">
+                    <div class="contact-main-container__facebook"><a href=""></a><img src="src/facebook_5968764.png" alt=""><span>Facebook</span></div>
+                    <div class="contact-main-container__messenger"><img src="src/messenger_5968771.png" alt=""><span>Messenger</span></div>
+                    <div class="contact-main-container__instagram"><img src="src/instagram_5968776.png" alt=""><span>Instagram</span></div>
+                    <div class="contact-main-container__whatsapp"><img src="src/whatsapp_733585.png" alt=""><span>WhatsUp</span></div>
+                </div>
+                </main>
 
-                    </main>
                 </div>
         </div> 
     </div> 
