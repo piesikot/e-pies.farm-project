@@ -63,7 +63,7 @@ body, html{
     list-style:none;
     gap: 6vw;
     font-size: clamp(11px, 2vw, 72px);
-    margin-bottom: auto;
+    /* margin-bottom: auto; */
     color:#000000;
 }  
 .menu a{
@@ -267,7 +267,6 @@ h2{
     padding: 15px 0px;
   }
 }
-/* finish it */
 
 /* turn off video: */
 /* video{ display: none; *{ background: #000; } */
