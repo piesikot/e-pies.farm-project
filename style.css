@@ -260,5 +260,14 @@ span a{
     top: 100px;
     }
 } 
+
+/* Mobile < S resolution */
+@media only screen and (min-width: 320px) {
+h2{
+    padding: 15px 0px;
+  }
+}
+/* finish it */
+
 /* turn off video: */
 /* video{ display: none; *{ background: #000; } */
