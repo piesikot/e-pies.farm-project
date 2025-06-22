@@ -70,10 +70,7 @@ body, html{
     color: #000000;
     text-decoration: none;
 }
-.menu .menu__farm{
-    text-decoration: underline;
-    cursor: not-allowed;
-} 
+
 .menu .menu__products-list{
     padding: 0;
     cursor: grab;
