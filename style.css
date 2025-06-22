@@ -135,6 +135,7 @@ h2{
     text-transform: uppercase;
     font-weight: 800;
 }
+
 .farm{
     color:#000;
     background: #ffffff;
@@ -144,64 +145,73 @@ h2{
     flex-direction:column;
     /* border: dotted 3px rgb(255, 0, 217); */
     font-size: clamp(8px, 1.5vw, 72px);
-    padding: 40px 0;
+    padding: 40px;
 }
 .farm__farm-img{
-    width: 30%;
+    width: 15em;
 }
-.farm__farm-title{
+
+/* .farm__farm-title{
     font-size: clamp(10px, 2vw, 72px);
-}
-.farm__farm-description{
+} */
+
+/* .farm__farm-description{
     text-align: center;
-}
+} */
 
-
-
-.chart{
+/* .chart{
     width: 300px;
-}
+} */
+
+/*  correct farm-img size
+    correct products-header-img size
+    correct products-main padding
+*/
+
+/* WTF!? */
 
 
-/* <!-- CHANGE CLASS NAMES TO farm- --> */
-.products-header-container{
+.farm__products-header-container{
     display: flex;      
     justify-content: center;
-    align-items: center;
-    padding: 30px;
+    align-items: center;    
+    /* padding: 30px; */
+    /* gap: 40px; */
 }
-.products-container__products-header-description h2{
+.farm__products-container__products-header-description h2{
     font-size: clamp(10px, 1.5vw, 72px);
 }
-.products-container__products-header-footer{
+.farm__products-container__products-header-footer{
     /* font-size: clamp(10px, 1.3vw, 72px);  */
     font-size: clamp(8px, 1.5vw, 72px);
 }
-.products-header-container__products-header-img{
-    width:100px;
-    padding: 0 10px;
+.farm__products-header-container__products-header-img{
+    width: 5em;
+    padding: 40px;
 }
-.products-header-container__wrap{
+.farm__products-header-container__wrap{
     display: flex;
     flex-direction: column;
-    gap:10px;
-    padding: 10px;
+    /* color: aqua; */
+    padding: 80px 0px 80px 0px;
+    
 }
-.products-main-container__products-main{
+.farm__products-main-container__products-main{
     display: flex;      
     justify-content: center;
     align-items: center;
-    padding: 20px 20px 20px 20px;
+
+    padding: 30px;
     /* flex-direction: column; */
+    gap: 30px;
 }
-.products-main-container__products-main__products-main-title h3{
+.farm__products-main-container__products-main__products-main-title h3{
     padding: 20px;
     font-weight: 666;
 }
-.products-main-container__products-main__products-main-description{
+.farm__products-main-container__products-main__products-main-description{
     font-size: clamp(10px, 1.5vw, 72px);
 }
-
 
 footer{
     background: #000;
