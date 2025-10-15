@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Piesik od Pokoleń | Psie mięso to przyszłość!| Pierwsza polska farma psów | sklep e-Pies </title>
+    <link rel="stylesheet" href="style.css">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="revised" content="2012.10.10" />
+    <meta name="ADAPTT" content="Animals Deserve Absolute Protection Today and Tomorrow" />
+    <meta name="keywords" content="ADAPTT, animal rights, veganism, Gary Yourofsky, fight speciesism, fight animal abuse" />
+    <meta name="description" content="This page incorporates the basic XHTML, CSS, and JavaScript source code for the
+        ADAPTT Kill Counter. This code is a modification of code produced by Action for Animals and SFVegan." />
+
+</head>
+<style> 
+
+</style>
+<body>
+    <div class="container">
+        <div class="top">
+                    <div class="logo-container">
+                        <img class="logo" src="src/logo.svg" alt="e-Pies">
+                    </div>
+                    <ul class="menu">
+                        <li class="menu__farm"><a href="index.html">Farma</a></li>
+                        <li class="menu__news"><a href="news.html">Aktualności</a></li>
+                        <ul class="menu__products-list"><a href="products.html">Produkty</a></li>
+                                </ul>
+                            <li class="menu__contact"><a href="contact.html">Kontakt</a></li>
+                            <li class="menu__mission"><a href="mission.html">Nasza Misja</a></li>
+                    </ul>
+                </div>
+                <div class="logo-container-media">
+                    <img class="logo" src="src/logo.svg" alt="e-Pies">
+                </div>
+             
+                <header>🤝 Współpraca</header>
+                <main> Projekt powstał we współpracy z [Elwood's Organic Dog Meat](https://www.elwooddogmeat.com/) — siecią zrzeszającą hodowców z całego świata, promującą wysoki dobrostan zwierząt na wiejskich gospodarstwach.</main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-menu"><span>DOBROSTAN ZWIERZĄT</span><span>POLITYKA FIRMY</span><span>PARTNERZY</span></div>
+            <div class="copyright"><span>COPYRIGHT e-Pies NIE WSZYSTKIE PRAWA ZASTRZEŻONE* </span></div>
+            <div><span><a href="http://www.piesikot.co">CREATED BY PiesikCorp Agency</a></span></div>
+        </div>
+    </footer>
+
+<script>
+    // Globalne zmienne:
+    // WAŻNE: Kolejność indeksów w 'counts' i 'rate' musi odpowiadać kolejności w HTML!
+    // count0: króliki
+    // count1: psy
+    // count2: koty
+    var counts = [ 0, 0, 0 ]; // Zmienione na 3 elementy (króliki, psy, koty)
+    var rate = [ 0, 0, 0 ];
+
+    // Funkcje:
+
+    function StartKillCounter() {
+        // Nowe wartości milionów zabitych zwierząt rocznie (przybliżone i proporcjonalne):
+        // króliki, psy, koty
+        var millions = [ 857, 16, 4 ]; // Zmodyfikowane tylko dla królów, psów, kotów w tej kolejności
+        var perSecond = 8; // Częstotliwość odświeżania na sekundę
+
+        for (var i = 0; i < counts.length; ++i)
+            rate[i] = millions[i] * 1000000 / 365 / 24 / 60 / 60 / perSecond;
+        setInterval(NewCounts, 1000 / perSecond);
+    }
+
+    function NewCounts() {
+        var num, thous, str;
+        for (var i = 0; i < counts.length; ++i) {
+            counts[i] += rate[i];
+            num = Math.round(counts[i]);
+            str = "";
+            while (num > 1000) {
+                thous = num % 1000;
+                if (thous < 10)
+                    thous = "00" + thous;
+                else if (thous < 100)
+                    thous = "0" + thous;
+                str = "," + thous + str;
+                num = Math.floor(num / 1000);
+            }
+            str = num + str;
+            document.getElementById("count" + i).innerHTML = str;
+        }
+    }
+
+    // Kod Google Analytics (pozostawiony bez zmian, jeśli go używasz)
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-44763726-1', 'adaptt.org');
+    ga('send', 'pageview');
+
+    // Uruchom licznik po załadowaniu skryptu
+    StartKillCounter();
+</script>
+</body>
+</html>
