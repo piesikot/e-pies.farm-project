@@ -50,7 +50,7 @@ Projekt udostępniany jest na licencji MIT.
 
 ## 👤 Autor
 
-- Projekt stworzony przez _Emil Piesk_
+- Projekt stworzony przez _Emil Piesk_.
 - Logo e-Pies - wszelkie prawa zastrzeżone.
 - Logo Piesik od Pokoleń - wszelkie prawa zastrzeżone.
 
