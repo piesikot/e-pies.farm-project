@@ -1,17 +1,17 @@
 [![GitHub](https://img.shields.io/badge/GitHub-piesikot-black?logo=github)](https://github.com/piesikot)
 ![Version](https://img.shields.io/badge/version-beta-red)
 
-# Piesik od Pokoleń
+# Piesik od Pokoleń (Piesik Through Generations)
 
 ## **This site is in beta. Many things may not work correctly!**
 
-A website project presenting the activities of a local farm involved in breeding animals for meat and dairy production.
+A website project presenting the activities of a local farm engaged in raising animals for meat and dairy production.
 
-Because this is the website of a Polish farm, it is available only in Polish. However, we warmly encourage you to check [the offerings of our international partners](https://piesikodpokolen.pl/partners.html).
+Because this is a website for a Polish farm, it is available only in Polish. However, we warmly invite you to see the [offer from our international partners](https://piesikodpokolen.pl/partners.html).
 
 ## 🌱 About the farm
 
-- A Polish farmer who loves his animals and ensures high animal welfare.
+- A farm run by a Polish farmer who loves his animals and ensures a high level of welfare.
 - The farm is not an industrialized farm, animals are kept in good conditions and are slaughtered humanely.
 - The meat meets all applicable quality and sanitary standards in accordance with European Union regulations.
 
