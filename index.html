@@ -212,17 +212,12 @@
         </div>
     </footer>
 
-    <!-- Temporary Alert Dialog -->
-    <div class="alert" role="dialog" aria-modal="true" aria-labelledby="alert-title">
-        <div class="alert__box" style="display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border:8px solid #e74c3c;padding:2rem;max-width:600px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.2);">
-            <h2 id="alert-title" style="color:#e74c3c;margin:0 0 0.5rem;font-size:2rem;">Strona w budowie</h2>
-            <p style="margin:0 0 1rem;color:#333;">Strona jest aktualnie w budowie. Wiele rzeczy może działać niepoprawnie. Prosimy o cierpliwość!</p>
-            <button id="alert-button" style="padding:0.6rem 1.2rem;border:none;background:#e74c3c;color:#fff;font-weight:600;cursor:pointer;border-radius:4px;">OK</button>
-        </div>
-    </div>
+     <div class="alert">
+        <img src="src/websiteunderconstruction.jpg" alt="">
+        <button id="alert-button">OK</button>
+    </div>  
 
 <script>
-    // Temporary Alert Dialog __ Close Functionality
     let alert_window = document.querySelector('.alert');
     let alert_button = document.querySelector('#alert-button');
     

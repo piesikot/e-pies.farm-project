@@ -63,7 +63,7 @@ html {
   padding: 0vw 3vw 0 3vw;
   list-style: none;
   gap: 6vw;
-  font-size: clamp(11px, 2vw, 72px);
+  font-size: clamp(11px, 2vw, 20px); /* pozostawione */
   /* margin-bottom: auto; */
   color: #000000;
 }
@@ -91,11 +91,27 @@ header {
 }
 h1 {
   text-align: center;
-  font-size: clamp(22px, 4vw, 148px);
+  font-size: clamp(22px, 4vw, 148px); /* unchanged */
   margin: 0;
 }
 h2 {
-  font-size: clamp(10px, 1.5vw, 72px);
+  font-size: clamp(
+    14px,
+    2.2vw,
+    28px
+  ); /* zmniejszone max i mniej agresywne vw */
+}
+h3 {
+  font-size: clamp(16px, 2.6vw, 30px); /* mniejszy skok na desktopie */
+}
+h4 {
+  font-size: clamp(12px, 1.8vw, 20px);
+}
+h5 {
+  font-size: clamp(10px, 1.4vw, 16px);
+}
+h6 {
+  font-size: clamp(9px, 1vw, 14px);
 }
 .wrapper {
   background-color: #ffffff;
@@ -105,7 +121,7 @@ h2 {
 }
 .adventages-container {
   display: flex;
-  font-size: clamp(8px, 1.5vw, 72px);
+  font-size: clamp(10px, 1.2vw, 18px); /* zmniejszone max */
   color: #ffffff;
 }
 .pro-container {
@@ -132,6 +148,9 @@ h2 {
   text-transform: uppercase;
   font-weight: 800;
 }
+.pro-title h3 {
+  font-size: clamp(14px, 2.4vw, 22px); /* mniejsze na desktopie */
+}
 
 .farm {
   color: #000;
@@ -140,8 +159,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* border: dotted 3px rgb(255, 0, 217); */
-  font-size: clamp(8px, 1.5vw, 72px);
+  font-size: clamp(10px, 1.2vw, 18px); /* zmniejszone max */
   padding: 40px;
 }
 .farm__farm-img {
@@ -175,11 +193,10 @@ h2 {
   /* gap: 40px; */
 }
 .farm__products-container__products-header-description h2 {
-  font-size: clamp(10px, 1.5vw, 72px);
+  font-size: clamp(12px, 1.4vw, 22px); /* mniejsze max */
 }
 .farm__products-container__products-header-footer {
-  /* font-size: clamp(10px, 1.3vw, 72px);  */
-  font-size: clamp(8px, 1.5vw, 72px);
+  font-size: clamp(10px, 1.1vw, 16px); /* mniejsze max */
 }
 .farm__products-header-container__products-header-img {
   width: 5em;
@@ -205,7 +222,7 @@ h2 {
   font-weight: 666;
 }
 .farm__products-main-container__products-main__products-main-description {
-  font-size: clamp(10px, 1.5vw, 72px);
+  font-size: clamp(12px, 1.2vw, 18px); /* zmniejszone max */
 }
 
 footer {
@@ -213,7 +230,7 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
-  font-size: clamp(8px, 1.5vw, 72px);
+  font-size: clamp(10px, 1.4vw, 18px); /* pozostawione */
   display: flex;
   justify-content: center;
 
