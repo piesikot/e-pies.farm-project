@@ -48,23 +48,20 @@
         </div>
     </footer>
 
+<!-- Google Analytics i cookie-consent zostały usunięte -->
+
 <script>
     // Globalne zmienne:
     // WAŻNE: Kolejność indeksów w 'counts' i 'rate' musi odpowiadać kolejności w HTML!
     // count0: króliki
     // count1: psy
     // count2: koty
-    var counts = [ 0, 0, 0 ]; // Zmienione na 3 elementy (króliki, psy, koty)
+    var counts = [ 0, 0, 0 ];
     var rate = [ 0, 0, 0 ];
 
-    // Funkcje:
-
     function StartKillCounter() {
-        // Nowe wartości milionów zabitych zwierząt rocznie (przybliżone i proporcjonalne):
-        // króliki, psy, koty
-        var millions = [ 857, 16, 4 ]; // Zmodyfikowane tylko dla królów, psów, kotów w tej kolejności
-        var perSecond = 8; // Częstotliwość odświeżania na sekundę
-
+        var millions = [ 857, 16, 4 ];
+        var perSecond = 8;
         for (var i = 0; i < counts.length; ++i)
             rate[i] = millions[i] * 1000000 / 365 / 24 / 60 / 60 / perSecond;
         setInterval(NewCounts, 1000 / perSecond);
@@ -86,18 +83,10 @@
                 num = Math.floor(num / 1000);
             }
             str = num + str;
-            document.getElementById("count" + i).innerHTML = str;
+            var el = document.getElementById("count" + i);
+            if (el) el.innerHTML = str;
         }
     }
-
-    // Kod Google Analytics (pozostawiony bez zmian, jeśli go używasz)
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-44763726-1', 'adaptt.org');
-    ga('send', 'pageview');
 
     // Uruchom licznik po załadowaniu skryptu
     StartKillCounter();

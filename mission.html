@@ -20,12 +20,19 @@
     text-decoration: underline;
     cursor: not-allowed; 
 }
-    .future, h2{
+    .future, h2, h3, h4, h5, h6{
         padding: 200px 0;
     }
     header, .kill-counter-farm{
         text-align: center;
     }
+    .counter-header{
+        font-size: clamp(22px, 4vw, 26px);
+    }
+    .counter{
+        font-size: clamp(22px, 4vw, 32px);
+    }
+
 </style>
 <body>
     <div class="container">
@@ -54,34 +61,39 @@
                     </div>
 
                     <div class="kill-counter-farm">
-                    <span>Od czasu zapoznawania się z naszą misją zostało zabitych na świecie dla Ciebie:<span>
-<!-- <p>
-    
-    <span id="count0">0</span>&nbsp;marine animals<br />
-    <span id="count1">0</span>&nbsp;chickens<br />
-    <span id="count2">0</span>&nbsp;ducks<br />
-    <span id="count3">0</span>&nbsp;pigs<br />
-    <span id="count4">0</span>&nbsp;rabbits<br />
-    <span id="count5">0</span>&nbsp;turkeys<br />
-    <span id="count6">0</span>&nbsp;geese<br />
-    <span id="count7">0</span>&nbsp;sheep<br />
-    <span id="count8">0</span>&nbsp;goats<br />
-    <span id="count9">0</span>&nbsp;cows and calves<br />
-    <span id="count10">0</span>&nbsp;rodents<br />
-    <span id="count11">0</span>&nbsp;pigeons and other birds<br />
-    <span id="count12">0</span>&nbsp;buffaloes<br />
-    <span id="count13">0</span>&nbsp;dogs<br />
-    <span id="count14">0</span>&nbsp;cats<br />
-    <span id="count15">0</span>&nbsp;horses<br />
-    <span id="count16">0</span>&nbsp;donkeys and mules<br />
-    <span id="count17">0</span>&nbsp;camels and other camelids
-</p> -->
+                    <span class="counter-header">Od czasu zapoznawania się z naszą misją zostało zabitych na świecie dla Ciebie:<span>
 
 <p>
-    <span id="count0">0</span>&nbsp;króliki<br />
-    <span id="count1">0</span>&nbsp;psy<br />
-    <span id="count2">0</span>&nbsp;koty
+    <span id="count0" class="counter">0</span>&nbsp;króliki<br />
+    <span id="count1" class="counter">0</span>&nbsp;psy<br />
+    <span id="count2" class="counter">0</span>&nbsp;koty
 </p>
+
+<h4>Czy cieszy Cię to, że rolnicy na całym świecie dbają o to, aby na Twój stół trafiały ich produkty?</h4>
+<h4>Takie jak nasze, produkty z gospodarstwa, hodowane z bardzo wysokimi standardami dobrostanu, trzymane na wolnym wybiegu </h4>
+<h5>...i humanitarnie...</h5>
+<h6>...zabijanie.</h6>
+
+<h6>Jeśli nie zgadzasz się z tą misją, a Twojemu sercu bliższa jest wizja przyszłości w której krzywda zwierząt jest niedopuszczalna, wiedz, że na świecie oprócz psów i kotów  i królików ze względu na ludzki konsumpcjonizm w każdej chwili zabijanych jest:</h6>
+
+    <!-- <p>
+    <span id="count0">0</span>&nbsp;zwierząt morskich<br />
+    <span id="count1">0</span>&nbsp;kurczaków<br />
+    <span id="count2">0</span>&nbsp;dzików<br />
+    <span id="count3">0</span>&nbsp;świnie<br />
+    <span id="count5">0</span>&nbsp;indyki<br />
+    <span id="count6">0</span>&nbsp;gęsi<br />
+    <span id="count7">0</span>&nbsp;owce<br />
+    <span id="count8">0</span>&nbsp;kozy<br />
+    <span id="count9">0</span>&nbsp;krowy i cielęta<br />
+    <span id="count10">0</span>&nbsp;gryzonie<br />
+    <span id="count11">0</span>&nbsp;gołębie i inne ptaki<br />
+    <span id="count12">0</span>&nbsp;bawoły<br />
+    <span id="count15">0</span>&nbsp;konie<br />
+    <span id="count16">0</span>&nbsp;osły i muły<br />
+    <span id="count17">0</span>&nbsp;wielbłądy i inne wielbłądowate
+</p>  -->
+
 </div>
 
     <footer>
@@ -94,21 +106,12 @@
 
 <script>
     // Globalne zmienne:
-    // WAŻNE: Kolejność indeksów w 'counts' i 'rate' musi odpowiadać kolejności w HTML!
-    // count0: króliki
-    // count1: psy
-    // count2: koty
-    var counts = [ 0, 0, 0 ]; // Zmienione na 3 elementy (króliki, psy, koty)
+    var counts = [ 0, 0, 0 ];
     var rate = [ 0, 0, 0 ];
 
-    // Funkcje:
-
     function StartKillCounter() {
-        // Nowe wartości milionów zabitych zwierząt rocznie (przybliżone i proporcjonalne):
-        // króliki, psy, koty
-        var millions = [ 857, 16, 4 ]; // Zmodyfikowane tylko dla królów, psów, kotów w tej kolejności
-        var perSecond = 8; // Częstotliwość odświeżania na sekundę
-
+        var millions = [ 857, 16, 4 ];
+        var perSecond = 8;
         for (var i = 0; i < counts.length; ++i)
             rate[i] = millions[i] * 1000000 / 365 / 24 / 60 / 60 / perSecond;
         setInterval(NewCounts, 1000 / perSecond);
@@ -130,18 +133,10 @@
                 num = Math.floor(num / 1000);
             }
             str = num + str;
-            document.getElementById("count" + i).innerHTML = str;
+            var el = document.getElementById("count" + i);
+            if (el) el.innerHTML = str;
         }
     }
-
-    // Kod Google Analytics (pozostawiony bez zmian, jeśli go używasz)
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-44763726-1', 'adaptt.org');
-    ga('send', 'pageview');
 
     // Uruchom licznik po załadowaniu skryptu
     StartKillCounter();
