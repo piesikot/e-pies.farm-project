@@ -19,87 +19,120 @@
     .menu__mission {
     text-decoration: underline;
     cursor: not-allowed; 
-}
-    .future, h2, h3, h4, h5, h6{
-        padding: 20vh 0;
     }
-    header, .kill-counter-farm{
+      header, main{
         text-align: center;
+        font-size: clamp(14px, 2.3vw, 20px);
+        padding: 0 100px;
     }
-    .counter-header{
-        font-size: clamp(22px, 4vw, 26px);
+    .future, h2, h3, h4{
+        padding: 20vh 0;
+        font-weight: 100;
     }
-    .counter{
-        font-size: clamp(22px, 4vw, 32px);
+    h5{
+        padding: 60vh 0;
+        font-weight: 100;
     }
+    h6{
+        padding: 10vh 0;
+        font-weight: 100;
+    }
+  
+
 </style>
 <body>
     <div class="container">
         <div class="top">
-                    <div class="logo-container">
-                        <img class="logo" src="src/PoP-logo.svg" alt="logo Piesik od Pokoleń ">
-                    </div>
-                    <ul class="menu">
-                        <li class="menu__farm"><a href="index.html">Farma</a></li>
-                        <li class="menu__news"><a href="aktualnosci.html">Aktualności</a></li>
-                        <ul class="menu__products-list"><a href="produkty.html">Produkty</a></li>
-                                </ul>
-                            <li class="menu__contact"><a href="kontakt.html">Kontakt</a></li>
-                            <li class="menu__mission"><a href="misja.html">Nasza Misja</a></li>
-                    </ul>
-                </div>
-                <div class="logo-container-media">
+                <div class="logo-container">
                     <img class="logo" src="src/PoP-logo.svg" alt="logo Piesik od Pokoleń ">
                 </div>
-                <header>
-                    <span class="future">
-                    <h1>Psie mięso to przyszłość!</h1>
-                    <h2>Czy się zgadzasz?</h2>
-                    <h4>W ramach programu „Psie mięso to Przyszłość” budujemy przyszłość zdrowego jedzenia. Dzięki współpracy z rolnikami z całego świata oraz możliwości kontroli produkcji na każdym etapie  możemy mieć pewność, że produkujemy najwyższej jakości mięso i wędliny.</h4>
+                <ul class="menu">
+                    <li class="menu__farm"><a href="index.html">Farma</a></li>
+                    <li class="menu__news"><a href="aktualnosci.html">Aktualności</a></li>
+                    <ul class="menu__products-list"><a href="produkty.html">Produkty</a></li>
+                </ul>
+                    <li class="menu__contact"><a href="kontakt.html">Kontakt</a></li>
+                    <li class="menu__mission"><a href="misja.html">Nasza Misja</a></li>
+                </ul>
+                </div>
+            <div class="logo-container-media">
+                <img class="logo" src="src/PoP-logo.svg" alt="logo Piesik od Pokoleń ">
+            </div>
+                
+            <header>
+                <span class="future">
+                <h1>Psie mięso to przyszłość!</h1>
+                <h2>Czy się zgadzasz?</h2>
+                </span>
+            </header>
+
+            <main>
+                <div class="kill-counter-farm">
+                    <span class="counter-header">Od czasu zapoznawania się z naszą misją zostało zabitych na świecie dla Ciebie:
                     </span>
+                    <p>  
+                        <span id="count1" class="counter">0</span>&nbsp;psy<br />
+                        <span id="count2" class="counter">0</span>&nbsp;koty
+                    </p>
+                </div>
 
-                    </div>
+            <h4>Czy cieszysz się, że wspólnie z innymi rolnikami na całym świecie dbamy o to, aby  mięso i nabiał trafiały na Twój stół?</h4>
 
-                    <div class="kill-counter-farm">
-                    <span class="counter-header">Od czasu zapoznawania się z naszą misją zostało zabitych na świecie dla Ciebie:<span>
+            <h4>Czy uważasz, że jedzenie mięsa jest osobistym wyborem?</h4>
 
-<p>
-    <span id="count0" class="counter">0</span>&nbsp;króliki<br />
-    <span id="count1" class="counter">0</span>&nbsp;psy<br />
-    <span id="count2" class="counter">0</span>&nbsp;koty
-</p>
+            <h4>Czy wiesz, że w wielu krajach psie mięso jest uważane za delikates, a jego spożywaie jest tradycją?</h4>
 
-<h4>Czy cieszy Cię to, że wspólnie z innymi rolnikami na całym świecie dbamy o to, aby na Twój stół trafiały nasze produkty?</h4>
+            <h4>Czy wiesz, że psie mięso jest doskonałym źródłem białka i wielu witamin?</h4>
 
-<h4>... z lokalnego gospodarstwa, hodowane z bardzo wysokimi standardami dobrostanu, trzymane na wolnym wybiegu... </h4>
-<h4>...i...</h4>
-<h5>... humanitarnie...</h5>
-<h6>...zabijane.</h6>
+            <h4>Czy wiesz, że ludzie jedli zwierzęta od zarania dziejów?</h4>
 
-<!-- Do naprawy. W ogóle cały skrypt licznika do refaktoryzacji -->
+            <h5>Czy uważasz, że wykorzystywanie psów i kotów jest nieetyczne?</h5>
+
+            <!-- Do naprawy. W ogóle cały skrypt licznika do refaktoryzacji -->
+            <h5>
+            <span class="counter-header">
+                Jeśli tak, to wiedz, że w tej chwili na świecie zabijanych jest również:
+            </span>
+                <div class="kill-counter-livestock">
+                    <p>
+                    <span id="count3" class="counter">0</span>&nbsp;zwierząt morskich<br />
+                    <span id="count4" class="counter">0</span>&nbsp;kurczaków<br />
+                    <span id="count5" class="counter">0</span>&nbsp;dzików<br />
+                    <span id="count6" class="counter">0</span>&nbsp;świnie<br />
+                    <span id="count7" class="counter">0</span>&nbsp;indyki<br />
+                    <span id="count8" class="counter">0</span>&nbsp;gęsi<br />
+                    <span id="count9" class="counter">0</span>&nbsp;owce<br />
+                    <span id="count10" class="counter">0</span>&nbsp;kozy<br />
+                    <span id="count11" class="counter">0</span>&nbsp;krowy i cielęta<br />
+                    <span id="count12" class="counter">0</span>&nbsp;króliki<br />
+                    <span id="count13" class="counter">0</span>&nbsp;gryzonie<br />
+                    <span id="count14" class="counter">0</span>&nbsp;gołębie i inne ptaki<br />
+                    <span id="count15" class="counter">0</span>&nbsp;bawoły<br />
+                    <span id="count16" class="counter">0</span>&nbsp;konie<br />
+                    <span id="count17" class="counter">0</span>&nbsp;osły i muły<br />
+                    <span id="count18" class="counter">0</span>&nbsp;wielbłądy i inne wielbłądowate<br />
+                    </p>
+                </div>  
+            </h5>
+
+            <h5>Czujesz niezgodę, widząc te liczby?</h5>
+
+            <h5>Chcesz coś z tym zrobić?</h5>
+
+            <h6>Przede wszystkim, pierwszym krokiem, jest zaprzestanie wspierania przemysłu mięsnego i mlecznego (ponieważ jest to ten sam przemyśł, bowiem udojnia to jest to samo co ubojnia, nawet tutaj różni się tylko jedną literą). 
+            </h6>
+
+            <h6><del>Krowa mleczna</del> Suka mleczna rozpoczyna życie i kończy życie w ubojni. Aby dowiedzieć się więcej <a href="https://www.youtube.com/watch?v=UcN7SGGoCNI">obejrzyj krótki 5-cio minutowy filmik.</a></h6>
+
+            <h6>Następnie możesz zapoznać się z naszą wizją przyszłości <a href=""> klikając tutaj.</a></h6>
 
 
-<!-- <h6>Jeśli nie zgadzasz się z tą misją, a Twojemu sercu bliższa jest wizja przyszłości w której krzywda zwierząt jest niedopuszczalna, wiedz, że na świecie oprócz psów i kotów  i królików ze względu na ludzki konsumpcjonizm w każdej chwili zabijanych jest:</h6>
- <p>
-    <span id="count0">0</span>&nbsp;zwierząt morskich<br />
-    <span id="count1">0</span>&nbsp;kurczaków<br />
-    <span id="count2">0</span>&nbsp;dzików<br />
-    <span id="count3">0</span>&nbsp;świnie<br />
-    <span id="count5">0</span>&nbsp;indyki<br />
-    <span id="count6">0</span>&nbsp;gęsi<br />
-    <span id="count7">0</span>&nbsp;owce<br />
-    <span id="count8">0</span>&nbsp;kozy<br />
-    <span id="count9">0</span>&nbsp;krowy i cielęta<br />
-    <span id="count10">0</span>&nbsp;gryzonie<br />
-    <span id="count11">0</span>&nbsp;gołębie i inne ptaki<br />
-    <span id="count12">0</span>&nbsp;bawoły<br />
-    <span id="count15">0</span>&nbsp;konie<br />
-    <span id="count16">0</span>&nbsp;osły i muły<br />
-    <span id="count17">0</span>&nbsp;wielbłądy i inne wielbłądowate
-</p>  -->
+
+
 
 </div>
 
+                </main>
     <footer>
         <div class="footer-wrapper">
             <div class="footer-menu"><span>DOBROSTAN ZWIERZĄT</span><span>POLITYKA FIRMY</span><span>PARTNERZY</span></div>
